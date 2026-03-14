@@ -12,33 +12,19 @@ export function Communication() {
     offset: ["start start", "end end"],
   });
 
-  const opacityText1 = useTransform(
+  const opacityText = useTransform(
     scrollYProgress,
-    [0.05, 0.15, 0.25],
+    [0.05, 0.15, 0.4],
     [0, 1, 0],
   );
-  const yText1 = useTransform(scrollYProgress, [0.05, 0.25], [30, -30]);
+  const yText = useTransform(scrollYProgress, [0.05, 0.4], [30, -30]);
 
-  const opacityText2 = useTransform(
-    scrollYProgress,
-    [0.35, 0.45, 0.55],
-    [0, 1, 0],
-  );
-  const yText2 = useTransform(scrollYProgress, [0.35, 0.55], [30, -30]);
+  const opacityTextAll = useTransform(scrollYProgress, [0.35, 0.45], [1, 0]);
+  const vignetteOpacity = useTransform(scrollYProgress, [0.35, 0.5], [1, 0]);
 
-  const opacityText3 = useTransform(
-    scrollYProgress,
-    [0.65, 0.75, 0.9],
-    [0, 1, 0],
-  );
-  const yText3 = useTransform(scrollYProgress, [0.65, 0.9], [30, -30]);
-
-  const opacityTextAll = useTransform(scrollYProgress, [0.85, 0.92], [1, 0]);
-  const vignetteOpacity = useTransform(scrollYProgress, [0.85, 0.95], [1, 0]);
-
-  const imgOpacity = useTransform(scrollYProgress, [0.85, 1], [0.5, 1]);
-  const imgSaturation = useTransform(scrollYProgress, [0.85, 1], [0, 1]);
-  const imgBlur = useTransform(scrollYProgress, [0.85, 1], [1, 0]);
+  const imgOpacity = useTransform(scrollYProgress, [0.35, 1], [0.5, 1]);
+  const imgSaturation = useTransform(scrollYProgress, [0.35, 1], [0, 1]);
+  const imgBlur = useTransform(scrollYProgress, [0.35, 1], [1, 0]);
 
   const imgFilter = useTransform(
     [imgSaturation, imgBlur],
@@ -47,36 +33,36 @@ export function Communication() {
 
   const yImg1 = useTransform(
     scrollYProgress,
-    [0, 0.85, 1],
-    ["20%", "-10%", "-120%"],
+    [0, 0.35, 1],
+    ["20%", "-10%", "-140%"],
   );
   const yImg2 = useTransform(
     scrollYProgress,
-    [0, 0.85, 1],
+    [0, 0.35, 1],
     ["40%", "-10%", "0%"],
   );
   const yImg3 = useTransform(
     scrollYProgress,
-    [0, 0.85, 1],
-    ["10%", "-20%", "-50%"],
+    [0, 0.35, 1],
+    ["10%", "-20%", "0%"],
   );
   const yImg4 = useTransform(
     scrollYProgress,
-    [0, 0.85, 1],
-    ["50%", "10%", "80%"],
+    [0, 0.35, 1],
+    ["50%", "10%", "60%"],
   );
 
-  const xImg1 = useTransform(scrollYProgress, [0.85, 1], ["0%", "120%"]);
-  const xImg2 = useTransform(scrollYProgress, [0.85, 1], ["0%", "-90%"]);
-  const xImg3 = useTransform(scrollYProgress, [0.85, 1], ["0%", "-30%"]);
-  const xImg4 = useTransform(scrollYProgress, [0.85, 1], ["0%", "20%"]);
+  const xImg1 = useTransform(scrollYProgress, [0.35, 1], ["0%", "150%"]);
+  const xImg2 = useTransform(scrollYProgress, [0.35, 1], ["0%", "-110%"]);
+  const xImg3 = useTransform(scrollYProgress, [0.35, 1], ["0%", "-50%"]);
+  const xImg4 = useTransform(scrollYProgress, [0.35, 1], ["0%", "10%"]);
 
-  const scaleImg = useTransform(scrollYProgress, [0.85, 1], [1, 1.35]);
+  const scaleImg = useTransform(scrollYProgress, [0.35, 1], [1, 1.35]);
 
   return (
     <section
       ref={containerRef}
-      className="relative h-[380vh] w-full bg-[#0A0A0A] py-12"
+      className="relative h-[260vh] w-full bg-[#0A0A0A] py-12"
     >
       <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 z-0 pointer-events-none">
@@ -142,7 +128,7 @@ export function Communication() {
               opacity: imgOpacity,
               filter: imgFilter,
             }}
-            className="absolute bottom-[20%] left-[10%] md:left-[5%] w-[160px] md:w-[400px] aspect-[16/9] rounded-2xl overflow-hidden hidden md:block"
+            className="absolute bottom-[20%] left-[10%] md:left-[5%] w-[160px] md:w-[360px] aspect-[16/9] rounded-2xl overflow-hidden hidden md:block"
           >
             <Image
               src="/images/amigos_4.jpeg"
@@ -164,60 +150,20 @@ export function Communication() {
         >
           <motion.div
             style={{
-              opacity: opacityText1,
-              y: yText1,
-              pointerEvents: opacityText1.get() > 0 ? "auto" : "none",
+              opacity: opacityText,
+              y: yText,
             }}
-            className="absolute inset-0 flex flex-col items-center justify-center"
+            className="flex flex-col items-center justify-center"
           >
             <div className="absolute inset-0 bg-black/40 backdrop-blur-md rounded-3xl -z-10" />
+
             <h3 className="font-playfair text-4xl md:text-6xl text-[#F5F5F5] leading-tight mb-6 drop-shadow-[0_8px_20px_rgba(0,0,0,0.7)]">
-              &quot;Por outro lado, uma coisa que eu valorizo muito é
-              escutar.&quot;
+              Gosto de entender o ponto de vista das pessoas. Uma das coisas que
+              mais me incomoda é a falta de comunicação.
             </h3>
+
             <p className="font-mono text-[#CDAA7D] text-sm tracking-widest uppercase">
-              A Arte da Comunicação
-            </p>
-          </motion.div>
-
-          <motion.div
-            style={{
-              opacity: opacityText2,
-              y: yText2,
-              pointerEvents: opacityText2.get() > 0 ? "auto" : "none",
-            }}
-            className="absolute inset-0 flex flex-col items-center justify-center"
-          >
-            <div className="absolute inset-0 bg-black/40 backdrop-blur-md rounded-3xl -z-10" />
-            <h3 className="font-playfair text-3xl md:text-5xl text-[#F5F5F5] leading-tight mb-8 drop-shadow-[0_8px_20px_rgba(0,0,0,0.7)]">
-              &quot;Eu realmente gosto de ouvir as pessoas e entender o ponto de
-              vista delas.&quot;
-            </h3>
-            <p className="font-inter text-[#C8C8C8] text-lg md:text-xl leading-relaxed max-w-2xl">
-              &quot;Talvez por isso uma das coisas que mais me incomoda seja a
-              falta de comunicação ou quando alguém não tem clareza no que está
-              fazendo. Eu acredito muito que bons resultados acontecem quando as
-              pessoas conseguem se entender bem.&quot;
-            </p>
-          </motion.div>
-
-          <motion.div
-            style={{
-              opacity: opacityText3,
-              y: yText3,
-              pointerEvents: opacityText3.get() > 0 ? "auto" : "none",
-            }}
-            className="absolute inset-0 flex flex-col items-center justify-center"
-          >
-            <div className="absolute inset-0 bg-black/40 backdrop-blur-md rounded-3xl -z-10" />
-            <div className="w-16 h-[1px] bg-[#2F6FFF] mb-8" />
-            <h3 className="font-playfair text-3xl md:text-5xl text-[#F5F5F5] leading-tight mb-8 drop-shadow-[0_8px_20px_rgba(0,0,0,0.7)]">
-              &quot;Outra característica importante minha é que eu tenho uma
-              autoestima muito sólida. É difícil me abalar.&quot;
-            </h3>
-            <p className="font-inter text-[#C8C8C8] text-lg md:text-xl leading-relaxed max-w-2xl">
-              &quot;Quando surgem desafios ou críticas, eu procuro usar isso
-              como aprendizado e seguir em frente.&quot;
+              Escutar
             </p>
           </motion.div>
         </motion.div>

@@ -82,22 +82,6 @@ export function Values() {
         <div className="relative z-20 w-full max-w-6xl px-6 text-center">
           <motion.div
             style={{
-              opacity: opacityIntro,
-              y: yIntro,
-              pointerEvents: opacityIntro.get() > 0 ? "auto" : "none",
-            }}
-            className="absolute inset-0 flex flex-col items-center justify-center"
-          >
-            <div className="bg-[#111111]/80 backdrop-blur-md border border-[#1F3A5F]/50 px-8 py-6 rounded-2xl shadow-2xl">
-              <h3 className="font-inter text-2xl md:text-3xl text-[#C8C8C8] leading-relaxed max-w-2xl">
-                &quot;São coisas simples, mas que me lembram muito do que
-                realmente importa.&quot;
-              </h3>
-            </div>
-          </motion.div>
-
-          <motion.div
-            style={{
               opacity: opacityMain,
               scale: scaleMain,
               pointerEvents: opacityMain.get() > 0 ? "auto" : "none",
@@ -105,66 +89,53 @@ export function Values() {
             className="absolute inset-0 flex flex-col items-center justify-center"
           >
             <h3 className="font-playfair text-3xl md:text-5xl text-[#F5F5F5] leading-tight mb-16 drop-shadow-2xl">
-              &quot;Se eu tivesse que resumir os valores que mais me
-              definem...&quot;
+              Os valores que me definem
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 w-full max-w-5xl">
               <motion.div
                 style={{ y: yCard1 }}
-                className="bg-[#0A0A0A]/90 backdrop-blur-xl border border-[#1F3A5F] rounded-xl p-8 relative overflow-hidden group"
+                className="bg-[#0A0A0A]/90 backdrop-blur-xl border border-[#1F3A5F] rounded-xl p-8 relative overflow-hidden"
               >
                 <div className="absolute top-0 left-0 w-full h-[2px] bg-[#2F6FFF]" />
                 <div className="absolute top-4 right-4 font-mono text-[#2F6FFF] text-[10px] opacity-50">
                   V_01
                 </div>
                 <div className="flex flex-col items-start text-left mt-8">
-                  <div className="w-8 h-8 rounded-full border border-[#2F6FFF]/30 flex items-center justify-center mb-6">
-                    <div className="w-2 h-2 rounded-full bg-[#2F6FFF]" />
-                  </div>
-                  <h4 className="font-playfair text-3xl md:text-4xl text-[#F5F5F5] mb-2">
-                    Justiça
+                  <h4 className="font-playfair text-3xl md:text-4xl text-[#F5F5F5]">
+                    Honestidade
                   </h4>
-                  <div className="w-12 h-[1px] bg-[#1F3A5F] mt-4" />
                 </div>
               </motion.div>
 
               <motion.div
                 style={{ y: yCard2 }}
-                className="bg-[#0A0A0A]/90 backdrop-blur-xl border border-[#CDAA7D]/50 rounded-xl p-8 relative overflow-hidden group shadow-[0_0_40px_rgba(205,170,125,0.1)]"
+                className="bg-[#0A0A0A]/90 backdrop-blur-xl border border-[#CDAA7D]/50 rounded-xl p-8 relative overflow-hidden shadow-[0_0_40px_rgba(205,170,125,0.1)]"
               >
                 <div className="absolute inset-0 bg-gradient-to-b from-[#CDAA7D]/10 to-transparent opacity-50" />
-                <div className="absolute top-0 left-0 w-full h-[2px] bg-[#CDAA7D] shadow-[0_0_15px_#CDAA7D]" />
+                <div className="absolute top-0 left-0 w-full h-[2px] bg-[#CDAA7D]" />
                 <div className="absolute top-4 right-4 font-mono text-[#CDAA7D] text-[10px] opacity-80">
                   V_02
                 </div>
                 <div className="flex flex-col items-start text-left mt-8 relative z-10">
-                  <div className="w-8 h-8 rounded-full border border-[#CDAA7D]/50 flex items-center justify-center mb-6">
-                    <div className="w-2 h-2 rounded-full bg-[#CDAA7D] animate-pulse" />
-                  </div>
                   <h4 className="font-playfair text-4xl md:text-5xl text-[#FFD89B]">
-                    Honestidade
+                    Lealdade
                   </h4>
-                  <div className="w-12 h-[1px] bg-[#CDAA7D]/50 mt-4" />
                 </div>
               </motion.div>
 
               <motion.div
                 style={{ y: yCard3 }}
-                className="bg-[#0A0A0A]/90 backdrop-blur-xl border border-[#1F3A5F] rounded-xl p-8 relative overflow-hidden group"
+                className="bg-[#0A0A0A]/90 backdrop-blur-xl border border-[#1F3A5F] rounded-xl p-8 relative overflow-hidden"
               >
                 <div className="absolute top-0 left-0 w-full h-[2px] bg-[#2F6FFF]" />
                 <div className="absolute top-4 right-4 font-mono text-[#2F6FFF] text-[10px] opacity-50">
                   V_03
                 </div>
                 <div className="flex flex-col items-start text-left mt-8">
-                  <div className="w-8 h-8 rounded-full border border-[#2F6FFF]/30 flex items-center justify-center mb-6">
-                    <div className="w-2 h-2 rounded-full bg-[#2F6FFF]" />
-                  </div>
-                  <h4 className="font-playfair text-3xl md:text-4xl text-[#F5F5F5] mb-2">
-                    Lealdade
+                  <h4 className="font-playfair text-3xl md:text-4xl text-[#F5F5F5]">
+                    Esperança
                   </h4>
-                  <div className="w-12 h-[1px] bg-[#1F3A5F] mt-4" />
                 </div>
               </motion.div>
             </div>
@@ -178,28 +149,13 @@ export function Values() {
             }}
             className="absolute inset-0 flex flex-col items-center justify-center"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 text-left items-center max-w-5xl">
-              <div className="border-l-2 border-[#CDAA7D] pl-8">
-                <h3 className="font-playfair text-3xl md:text-5xl text-[#F5F5F5] leading-tight mb-6">
-                  &quot;Eu sou extremamente leal às pessoas e aos meus
-                  princípios.&quot;
-                </h3>
-              </div>
-              <div className="flex flex-col gap-6">
-                <p className="font-inter text-[#C8C8C8] text-lg md:text-xl leading-relaxed">
-                  &quot;Eu valorizo muito respeito e não sou uma pessoa que
-                  gosta de conflito.&quot;
-                </p>
-                <div className="bg-[#111111]/80 backdrop-blur-sm border border-[#1F3A5F] p-6 rounded-xl">
-                  <p className="font-mono text-[#2F6FFF] text-xs uppercase mb-2">
-                    Ação Prioritária
-                  </p>
-                  <p className="font-inter text-[#F5F5F5] text-lg font-medium">
-                    &quot;Prefiro sempre o diálogo e o respeito ao espaço do
-                    outro.&quot;
-                  </p>
-                </div>
-              </div>
+            <div className="max-w-3xl text-center">
+              <h3 className="font-playfair text-3xl md:text-5xl text-[#F5F5F5] leading-tight mb-6">
+                Sempre acredito que
+              </h3>
+              <p className="font-inter text-[#C8C8C8] text-xl md:text-2xl">
+                as coisas podem melhorar.
+              </p>
             </div>
           </motion.div>
         </div>

@@ -161,11 +161,13 @@ export function Dreamer() {
             }}
             className="absolute inset-0 flex flex-col items-center justify-center"
           >
-            <h3 className="font-inter text-2xl md:text-3xl text-[#C8C8C8] leading-relaxed max-w-3xl drop-shadow-lg">
-              &quot;Mas se vocês olharem só para esse lado mais organizado e
-              estratégico, vão perder uma parte muito grande de quem eu
-              sou.&quot;
+            <h3 className="font-inter text-2xl md:text-3xl text-[#C8C8C8] leading-relaxed max-w-3xl drop-shadow-lg mb-8">
+              Autoestima sólida
             </h3>
+
+            <h2 className="font-playfair text-3xl md:text-4xl lg:text-6xl text-[#F5F5F5] leading-tight text-gradient-gold drop-shadow-2xl">
+              Desafios e críticas → aprendizado → seguir em frente
+            </h2>
           </motion.div>
 
           <motion.div
@@ -177,8 +179,12 @@ export function Dreamer() {
             }}
             className="absolute inset-0 flex flex-col items-center justify-center"
           >
+            <h3 className="font-inter text-2xl md:text-3xl text-[#C8C8C8] leading-relaxed max-w-3xl drop-shadow-lg mb-8">
+              Meu outro lado
+            </h3>
+
             <h2 className="font-playfair text-5xl md:text-7xl lg:text-8xl text-[#F5F5F5] leading-tight text-gradient-gold drop-shadow-2xl">
-              &quot;Eu sou uma pessoa muito sonhadora.&quot;
+              Eu também sou muito sonhadora.
             </h2>
           </motion.div>
 
@@ -190,21 +196,18 @@ export function Dreamer() {
             }}
             className="absolute inset-0 flex flex-col items-center justify-center"
           >
-            <div className="bg-black/40 backdrop-blur-md p-8 rounded-2xl border border-white/10 shadow-2xl max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 text-left items-center">
-              <div>
-                <div className="w-12 h-[1px] bg-[#CDAA7D] mb-6" />
-                <h3 className="font-playfair text-2xl md:text-4xl text-[#F5F5F5] leading-tight mb-6">
-                  &quot;Eu adoro livros que me tiram da realidade e histórias
-                  com final feliz.&quot;
-                </h3>
-              </div>
-              <div>
-                <p className="font-inter text-[#C8C8C8] text-lg md:text-xl leading-relaxed">
-                  &quot;Sou muito ligada à minha família, adoro ver fotos
-                  antigas, assistir vídeos nossos e passar horas conversando com
-                  os meus pais.&quot;
-                </p>
-              </div>
+            <div className="bg-black/40 backdrop-blur-md p-8 rounded-2xl border border-white/10 shadow-2xl max-w-3xl mx-auto flex flex-col items-center gap-6 text-center">
+              <p className="font-playfair text-3xl md:text-4xl text-[#F5F5F5] ">
+                Livros
+              </p>
+
+              <p className="font-playfair text-3xl md:text-4xl text-[#F5F5F5] ">
+                Histórias com final feliz
+              </p>
+
+              <p className="font-playfair text-3xl md:text-4xl text-[#F5F5F5] ">
+                Memórias em família
+              </p>
             </div>
           </motion.div>
         </div>

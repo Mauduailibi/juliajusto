@@ -102,17 +102,38 @@ export function EngineeringMind() {
           {/* Glassmorphism forte para o texto saltar na frente da foto/grade */}
           <div className="bg-[#111111]/80 backdrop-blur-xl border border-[#1F3A5F] p-8 md:p-12 rounded-2xl shadow-[0_30px_80px_rgba(0,0,0,0.8)]">
             <div className="flex items-center gap-3 mb-8">
-              <span className="w-2 h-2 rounded-full bg-[#2F6FFF] animate-pulse" />
+              {/* <span className="w-2 h-2 rounded-full bg-[#2F6FFF] animate-pulse" /> */}
               <p className="font-mono text-[#2F6FFF] text-xs tracking-widest uppercase">
                 A Mente de Engenharia
               </p>
             </div>
 
-            <h3 className="font-playfair text-3xl md:text-4xl text-[#F5F5F5] leading-tight mb-8">
+            {/* <h3 className="font-playfair text-3xl md:text-4xl text-[#F5F5F5] leading-tight mb-8">
               &quot;Eu sou uma pessoa que gosta de planejar,{" "}
               <span className="text-[#2F6FFF] italic">organizar</span> e
               antecipar problemas.&quot;
-            </h3>
+            </h3> */}
+
+            <div className="flex items-center mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#2F6FFF] animate-pulse mr-4" />
+              <h3 className="font-playfair text-3xl md:text-4xl text-[#F5F5F5] leading-tight">
+                Planejar
+              </h3>
+            </div>
+
+            <div className="flex items-center mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#2F6FFF] animate-pulse mr-4" />
+              <h3 className="font-playfair text-3xl md:text-4xl text-[#F5F5F5] leading-tight">
+                Organizar
+              </h3>
+            </div>
+
+            <div className="flex items-center mb-8">
+              <span className="w-2 h-2 rounded-full bg-[#2F6FFF] animate-pulse mr-4" />
+              <h3 className="font-playfair text-3xl md:text-4xl text-[#F5F5F5] leading-tight">
+                Antecipar problemas
+              </h3>
+            </div>
 
             {/* Linha de processo (simulando "processo claro") */}
             <div className="w-full h-[1px] bg-[#1F3A5F] relative mb-8">
@@ -130,8 +151,7 @@ export function EngineeringMind() {
             </div>
 
             <p className="font-inter text-[#C8C8C8] text-lg leading-relaxed">
-              &quot;Eu fico tranquila quando o processo está claro e funcionando
-              bem.&quot;
+              Só um processo claro e funcionando bem me deixa tranquila.
             </p>
           </div>
         </motion.div>

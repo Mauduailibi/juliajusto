@@ -66,7 +66,7 @@ export function Hero() {
           className="absolute top-[30%] left-[5%] md:left-[5%] w-[180px] md:w-[240px] aspect-[4/5] -rotate-6 pointer-events-auto group"
         >
           <div className="w-full h-full p-2 bg-[#F5F5F5] shadow-2xl rounded-sm transition-transform duration-500 hover:scale-105 hover:z-50 hover:rotate-0">
-            <div className="relative w-full h-full overflow-hidden grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 border border-gray-200">
+            <div className="relative w-full h-full overflow-hidden opacity-100 transition-all duration-500 border border-gray-200">
               <Image
                 src="/images/julia_1.jpeg"
                 alt="Julia Engineering"
@@ -85,7 +85,7 @@ export function Hero() {
           className="absolute bottom-[10%] right-[5%] md:right-[5%] w-[200px] md:w-[280px] aspect-square rotate-12 pointer-events-auto group"
         >
           <div className="w-full h-full p-2 bg-[#F5F5F5] shadow-2xl rounded-sm transition-transform duration-500 hover:scale-105 hover:z-50 hover:rotate-0">
-            <div className="relative w-full h-full overflow-hidden grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 border border-gray-200">
+            <div className="relative w-full h-full overflow-hidden opacity-100 transition-all duration-500 border border-gray-200">
               <Image
                 src="/images/familia_1.jpeg"
                 alt="Família"
@@ -103,7 +103,7 @@ export function Hero() {
           className="absolute top-[10%] right-[10%] md:right-[10%] w-[140px] md:w-[180px] aspect-[3/4] -rotate-12 pointer-events-auto group hidden md:block"
         >
           <div className="w-full h-full p-2 bg-[#F5F5F5] shadow-2xl rounded-sm transition-transform duration-500 hover:scale-105 hover:z-50 hover:rotate-0">
-            <div className="relative w-full h-full overflow-hidden grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 border border-gray-200">
+            <div className="relative w-full h-full overflow-hidden opacity-100 transition-all duration-500 border border-gray-200">
               <Image
                 src="/images/namorado_1.jpeg"
                 alt="Irmãs"

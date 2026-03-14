@@ -19,26 +19,17 @@ export function Personality() {
     [0, 1, 1, 0],
   );
 
-  const opacityText1 = useTransform(
-    scrollYProgress,
-    [0.1, 0.2, 0.3],
-    [0, 1, 0],
-  );
-  const yText1 = useTransform(scrollYProgress, [0.1, 0.3], [30, -30]);
+  const opacityText1 = useTransform(scrollYProgress, [0.15, 0.25], [0, 1]);
+  const yText1 = useTransform(scrollYProgress, [0.15, 0.25], [30, 0]);
 
-  const opacityText2 = useTransform(
-    scrollYProgress,
-    [0.35, 0.45, 0.55],
-    [0, 1, 0],
-  );
-  const yText2 = useTransform(scrollYProgress, [0.35, 0.55], [30, -30]);
+  const opacityText2 = useTransform(scrollYProgress, [0.3, 0.4], [0, 1]);
+  const yText2 = useTransform(scrollYProgress, [0.3, 0.4], [30, 0]);
 
-  const opacityText3 = useTransform(
-    scrollYProgress,
-    [0.65, 0.75, 0.9],
-    [0, 1, 0],
-  );
-  const yText3 = useTransform(scrollYProgress, [0.65, 0.9], [30, -30]);
+  const opacityText3 = useTransform(scrollYProgress, [0.45, 0.55], [0, 1]);
+  const yText3 = useTransform(scrollYProgress, [0.45, 0.55], [30, 0]);
+
+  const opacityText4 = useTransform(scrollYProgress, [0.6, 0.7], [0, 1]);
+  const yText4 = useTransform(scrollYProgress, [0.6, 0.7], [30, 0]);
 
   return (
     <section
@@ -77,71 +68,34 @@ export function Personality() {
         </div>
 
         <div className="w-full md:w-1/2 h-[60vh] md:h-screen flex items-center justify-center relative z-20">
-          <div className="relative w-full max-w-lg">
-            <motion.div
-              style={{
-                opacity: opacityText1,
-                y: yText1,
-                pointerEvents: opacityText1.get() > 0 ? "auto" : "none",
-              }}
-              className="absolute inset-0 flex flex-col justify-center"
+          <div className="flex flex-col gap-6 w-full max-w-lg">
+            <motion.h3
+              style={{ opacity: opacityText1, y: yText1 }}
+              className="font-playfair text-4xl md:text-5xl text-white"
             >
-              <p className="font-mono text-[#2F6FFF] text-xs tracking-widest uppercase mb-6 flex items-center gap-2">
-                <span className="w-4 h-[1px] bg-[#2F6FFF]" /> Avaliação
-              </p>
-              <h3 className="font-playfair text-4xl md:text-5xl text-white leading-tight">
-                &quot;Quando fizemos o teste de perfil, o meu resultado foi{" "}
-                <span className="text-[#2F6FFF]">Lobo</span>...&quot;
-              </h3>
-              <p className="font-inter text-gray-300 text-lg mt-6 opacity-80">
-                &quot;...e quando eu li a descrição, fez muito sentido para
-                mim.&quot;
-              </p>
-            </motion.div>
+              Método
+            </motion.h3>
 
-            <motion.div
-              style={{
-                opacity: opacityText2,
-                y: yText2,
-                pointerEvents: opacityText2.get() > 0 ? "auto" : "none",
-              }}
-              className="absolute inset-0 flex flex-col justify-center"
+            <motion.h3
+              style={{ opacity: opacityText2, y: yText2 }}
+              className="font-playfair text-4xl md:text-5xl text-white"
             >
-              <h3 className="font-playfair text-3xl md:text-4xl text-white leading-tight mb-6">
-                &quot;Eu gosto de método, de regras claras e de entender o
-                porquê das coisas.&quot;
-              </h3>
-              <p className="font-inter text-gray-300 text-lg leading-relaxed">
-                Sou aquela pessoa que revisa o trabalho várias vezes antes de
-                entregar e que tenta olhar o processo inteiro para garantir que
-                tudo está funcionando.
-              </p>
-            </motion.div>
+              Regras claras
+            </motion.h3>
 
-            <motion.div
-              style={{
-                opacity: opacityText3,
-                y: yText3,
-                pointerEvents: opacityText3.get() > 0 ? "auto" : "none",
-              }}
-              className="absolute inset-0 flex flex-col justify-center"
+            <motion.h3
+              style={{ opacity: opacityText3, y: yText3 }}
+              className="font-playfair text-4xl md:text-5xl text-white"
             >
-              <p className="font-mono text-[#CDAA7D] text-xs tracking-widest uppercase mb-4">
-                {"//"} O Desafio
-              </p>
-              <h3 className="font-playfair text-3xl md:text-4xl text-white leading-tight mb-6">
-                &quot;Eu tenho uma certa resistência interna a mudanças muito
-                bruscas.&quot;
-              </h3>
-              <p className="font-inter text-gray-300 text-lg leading-relaxed">
-                Eu me adapto quando é necessário, porque a vida exige, mas eu
-                funciono melhor quando existe{" "}
-                <span className="font-semibold text-white">
-                  planejamento, estrutura e direção
-                </span>
-                .
-              </p>
-            </motion.div>
+              Entender o porquê das coisas
+            </motion.h3>
+
+            <motion.h3
+              style={{ opacity: opacityText4, y: yText4 }}
+              className="font-playfair text-4xl md:text-5xl text-white"
+            >
+              Revisar antes de entregar
+            </motion.h3>
           </div>
         </div>
       </div>
